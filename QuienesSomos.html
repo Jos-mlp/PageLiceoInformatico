@@ -28,12 +28,13 @@
         }
         .header{
             position: relative;
-            height: 80vh;
+            height: 40vh;
             /* 02 */
-            background-image: linear-gradient(to top,  rgba(54, 61, 53, 0.384) 0%, hsla(0, 9%, 13%, 0.685) 100%), url(img/LiceoPatio.jpg);
+            background-image: linear-gradient(to top,  rgba(54, 61, 53, 0.384) 0%, hsla(0, 9%, 13%, 0.685) 100%), url(img/portada.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;   
+            align-items: center;
         }
         /*JAVASCRIPT desplazamiento navbar*/
         header.abajo .nav-desktop {
@@ -148,7 +149,7 @@
             align-items: center;
             justify-content: center;
         }
-        .navbar-left ul li:first-child{
+        .navbar-left ul li:nth-child(2){
             border-bottom: 4px solid blue;
         }
         .navbar-left ul li a{
@@ -181,11 +182,16 @@
         .navbar-icons img:hover{
             margin-bottom: 4px;
         }
+        .whatsapp-icon img{
+            width: 72px;
+        }
         .main{
             height: 500px;
         }
-        .whatsapp-icon img{
-            width: 72px;
+        .titulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .footer{
             height: 600px;
@@ -337,7 +343,9 @@
         </nav>
     </header>
     <main class="main">
-
+        <header class="titulo">
+            <h1 class="header-titulo">¿Quienes somos?</h1>
+        </header>
     </main>
     <footer class="footer">
         <div class="info-footer">
