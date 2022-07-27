@@ -56,9 +56,9 @@
         header.abajo .nombre{
             color: #314f6e;
         }
-        header.abajo .navbar-right  .navbar-icons{
+        header.abajo .navbar-right  ul li img{
             background-color: #314f6e;
-            border-radius: 8px;
+            border-radius: 4px;
         }
         /*Termina*/
         body{
@@ -75,7 +75,15 @@
             border-bottom: 1px solid var(--very-light-pink);
         }
         .menu{
+            top: 30px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
             display: none;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+            cursor: pointer;
+            background-color: white;
         }
         .menu-navegacion{
             position: fixed;
@@ -100,10 +108,20 @@
             color: #fff;
             text-decoration: none;
         }
+        .close{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            left: 24px;
+            top: 24px;
+            border: 2px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
         .logo{
-            height: 80px;
+            height: 100px;
             object-fit: contain;
-            margin-right: 24px;
+            margin: 0;
         }
         .nombre{
             color: var(--white);
@@ -140,8 +158,8 @@
             border-radius: 12px;
         }
         .navbar-left ul li a:hover{
-            border: 1px solid var(--hospital-green) ;
-            color: var(--hospital-green);
+            border: 1px solid #58A4FA ;
+            color: #58A4FA;
         }
         .navbar-phone{
             color: var(--white);
@@ -190,31 +208,8 @@
             margin-bottom: 50px;
         }
         @media (max-width:640px) {
-            .menu{
-                display: block;
-                height: 20px;
-                margin: 0;
-                padding: 0;
-            }
             .menu-navegacion{
                 width: 65vw;
-            }
-            .navbar-left ul,.navbar-right ul{
-                display: none;
-            }
-            .navbar-phone{
-                display: none;
-            }
-            .logo{
-            width: 150px;
-            margin: 0;
-            }
-            .nombre{
-            display: none;
-            }
-            .nav-desktop{
-                padding: 0 8px;
-                margin: 0;
             }
             .info-footer{
             display: flex;
@@ -239,20 +234,17 @@
             }
             
         }
-        @media (max-width:900px) {
+        @media (max-width:1070px) {
             .menu{
                 display: block;
                 height: 20px;
-                margin: 0;
+                margin-left: 8px;
                 padding: 0;
             }
             .menu-navegacion{
             width: 50vw;
             }
-            .navbar-left ul,.navbar-right ul{
-                display: none;
-            }
-            .navbar-phone{
+            .navbar-left ul{
                 display: none;
             }
             .logo{
@@ -262,30 +254,36 @@
             .nombre{
                 display: none;
             }
+            .nav-desktop{
+                margin: 0;
+                padding: 0;
+            }
             .mapa iframe{
             width:100%;
             }
             .iframe{
             border:0;
             }
-        }
+            }
+            @media (max-width:1270px) {
+                .navbar-right ul{
+                    display: none;
+                }
+            }
+            @media (max-width:1472px) {
+                .navbar-phone{
+                    display: none;
+                }
+            }
     </style>
 </head>
 <body>
     <header class="header" id="inicio">
-        <!--Menu mobile-->
-        <nav class="menu-navegacion">
-            <a href="/">Inicio</a>
-            <a href="/">¿Quienes somos?</a>
-            <a href="/">Servicios</a>
-            <a href="/">Gira Educativa</a>
-            <a href="/">Contacto</a>
-        </nav>
         <!--Nav Desktop y mobile-->
         <nav class="nav-desktop">
             <img src="./img/Menu.svg" alt="menu" class="menu">
             <div class="navbar-left">
-                <img src="./img/logo.jpg" alt="logo" class="logo">
+                <img src="./img/logo-h.png" alt="logo" class="logo">
                 <p class="nombre">Liceo Informatico Manuel</p>
                 <ul>
                     <li>
@@ -327,6 +325,15 @@
                     </li>
                 </ul>
             </div>
+        </nav>
+        <!--Menu mobile-->
+        <nav class="menu-navegacion">
+            <a href="/">Inicio</a>
+            <a href="/">¿Quienes somos?</a>
+            <a href="/">Servicios</a>
+            <a href="/">Gira Educativa</a>
+            <a href="/">Contacto</a>
+            <figure class="close"><img src="./img/Close.svg" alt="cerrar"></figure>
         </nav>
     </header>
     <main class="main">
