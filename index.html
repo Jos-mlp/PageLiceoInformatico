@@ -6,276 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Una educación nueva, una educación diferente">
     <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Liceo Informatico Manuel</title>
-    <!--<link rel="stylesheet" href="/css/style.css">-->
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        :root{
-            --white: #FFFFFF;
-            --black: #000000;
-            --very-light-pink: #c7c7c7;
-            --text-input-field:  #f7f7f7;
-            --hospital-green: #ACD9b2;
-            --sm: 14px;
-            --md: 16px;
-            --lg: 18px;
-        }
-        .header{
-            position: relative;
-            height: 80vh;
-            /* 02 */
-            background-image: linear-gradient(to top,  rgba(54, 61, 53, 0.384) 0%, hsla(0, 9%, 13%, 0.685) 100%), url(img/LiceoPatio.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;   
-        }
-        /*JAVASCRIPT desplazamiento navbar*/
-        header.abajo .nav-desktop {
-            background-color: white;
-        }
-        header.abajo .navbar-left ul li a{
-            text-decoration: none;
-            color: #314f6e;
-            padding: 16px;
-            border-radius: 12px;
-        }
-        header.abajo .navbar-phone{
-            color: #314f6e;
-            font-size: var(--lg);
-            margin-right: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        header.abajo .nombre{
-            color: #314f6e;
-        }
-        header.abajo .navbar-right  ul li img{
-            background-color: #314f6e;
-            border-radius: 4px;
-        }
-        /*Termina*/
-        body{
-            font-family: 'Quicksand', sans-serif;
-            margin: 0;
-        }
-        .nav-desktop {
-            position: fixed;
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-            border-bottom: 1px solid var(--very-light-pink);
-        }
-        .menu{
-            top: 30px;
-            right: 30px;
-            width: 40px;
-            height: 40px;
-            display: none;
-            border-radius: 8px;
-            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-            cursor: pointer;
-            background-color: white;
-        }
-        .menu-navegacion{
-            position: fixed;
-            top: 0;
-            width: 30vw;
-            height: 100%;
-            background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            left: 0;
-            transform: translateX(-110%);
-            transition:transform 0.3s ease-in-out;
-            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        }
-        .spread{
-            transform: translateX(0);
-        }
-
-        .menu-navegacion a{
-            color: #fff;
-            text-decoration: none;
-        }
-        .close{
-            width: 22px;
-            height: 22px;
-            position: absolute;
-            left: 24px;
-            top: 24px;
-            border: 2px solid white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .logo{
-            height: 100px;
-            object-fit: contain;
-            margin: 0;
-        }
-        .nombre{
-            color: var(--white);
-            font-size: var(--lg);
-            font-weight: bold;
-            margin-right: 20px;
-        }
-        .navbar-left,.navbar-right{
-            display: flex;
-            align-items: center;
-        }
-        .navbar-left{
-            margin-left: 64px;
-        }
-        .navbar-right{
-            margin-right: 64px;
-        }
-        .navbar-left ul, 
-        .navbar-right ul{
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .navbar-left ul li:first-child{
-            border-bottom: 4px solid blue;
-        }
-        .navbar-left ul li a{
-            text-decoration: none;
-            color: var(--very-light-pink);
-            padding: 16px;
-            border-radius: 12px;
-        }
-        .navbar-left ul li a:hover{
-            border: 1px solid #58A4FA ;
-            color: #58A4FA;
-        }
-        .navbar-phone{
-            color: var(--white);
-            font-size: var(--lg);
-            margin-right: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .navbar-phone img{
-            width: 28px;
-            margin: 0 8px 0 4px;
-        }
-        .navbar-icons{
-            position: relative;
-            width: 28px;
-            margin: 0 12px 0 12px;
-        }
-        .navbar-icons img:hover{
-            margin-bottom: 4px;
-        }
-        .main{
-            height: 500px;
-        }
-        .whatsapp-icon img{
-            width: 72px;
-        }
-        .footer{
-            height: 600px;
-            background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-        }
-        .info-footer{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .info-footer p{
-            margin: 20px;
-            font-size: var(--md);
-            color: var(--very-light-pink);
-        }
-        .mapa{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-        @media (max-width:640px) {
-            .menu-navegacion{
-                width: 65vw;
-            }
-            .info-footer{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            }
-            .info-footer p{
-                margin: 4px;
-                font-size: var(--sm);
-                color: var(--very-light-pink);
-            }
-            .info-footer p:nth-child(2),
-            .info-footer p:nth-child(4){
-                display: none;
-            }
-            .mapa iframe{
-            width:100%;
-            }
-            .iframe{
-            border:0;
-            }
-            
-        }
-        @media (max-width:1070px) {
-            .menu{
-                display: block;
-                height: 20px;
-                margin-left: 8px;
-                padding: 0;
-            }
-            .menu-navegacion{
-            width: 50vw;
-            }
-            .navbar-left ul{
-                display: none;
-            }
-            .logo{
-            width: 150px;
-            margin: 0;
-            }
-            .nombre{
-                display: none;
-            }
-            .nav-desktop{
-                margin: 0;
-                padding: 0;
-            }
-            .mapa iframe{
-            width:100%;
-            }
-            .iframe{
-            border:0;
-            }
-            }
-            @media (max-width:1270px) {
-                .navbar-right ul{
-                    display: none;
-                }
-            }
-            @media (max-width:1472px) {
-                .navbar-phone{
-                    display: none;
-                }
-            }
-    </style>
 </head>
 <body>
     <header class="header" id="inicio">
@@ -335,9 +70,59 @@
             <a href="/">Contacto</a>
             <figure class="close"><img src="./img/Close.svg" alt="cerrar"></figure>
         </nav>
+        <span class="WhatsApp--chat"><a href=""><img src="./img/chatwhatsapp.png" alt="WhatsApp"></a></span>
     </header>
     <main class="main">
+        <section class="contenedor-section-principal contenedor-section-principal--desktop">
+            <h2>Nuestros Pilares</h2>
+            <div class="contenedor-section-principal--pilares">
+                <section class="contenedor__pilar contenedor__pilar--1">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>
+                    <img src="./img/1.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    </section>
+                <section class="contenedor__pilar contenedor__pilar--2">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>
+                    <img src="./img/2.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    </section>
+                <section class="contenedor__pilar contenedor__pilar--3">
+                    <img src="./img/3.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>
+                </section>
+                <section class="contenedor__pilar contenedor__pilar--4">
+                    <img src="./img/4.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>
+                </section>
+            </div>
+        </section>
+        <section class="contenedor-section-principal contenedor-section-principal--mobile">
+            <h2>Nuestros Pilares</h2>
+            <div class="contenedor-section-principal--pilares">
+                <section class="contenedor__pilar contenedor__pilar--1">
+                    <img src="./img/1.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>             
+                    </section>
+                <section class="contenedor__pilar contenedor__pilar--2">
+                    <img src="./img/2.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>
+                    </section>
+                <section class="contenedor__pilar contenedor__pilar--3">
+                    <img src="./img/3.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>
+                </section>
+                <section class="contenedor__pilar contenedor__pilar--4">
+                    <img src="./img/4.jpeg" alt="Cuerpo" class="contenedor__pilar--imagen">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis fugit minus consequatur a omnis. A saepe similique ipsa totam animi delectus sequi ullam hic ex molestiae iure fuga ab doloribus, porro suscipit, ut, officia accusantium quam culpa nostrum alias debitis commodi itaque. Sed, officiis vero saepe eius praesentium voluptate ipsum tenetur quam neque error alias veniam sapiente accusantium corrupti eveniet, adipisci similique quae? Quod accusantium iste rerum. Optio sint quidem distinctio culpa. Doloribus maiores pariatur aspernatur facere vel accusantium animi sequi? Quas ratione animi, molestiae velit qui harum inventore est, distinctio nulla beatae ullam, accusantium magni praesentium commodi dolorem neque.</p>
+                </section>
+            </div>
+        </section>
+        <section>
+            <div>
 
+            </div>
+        </section>
+        <section>
+            
+        </section>
     </main>
     <footer class="footer">
         <div class="info-footer">
@@ -353,9 +138,10 @@
         <div class="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.307185328189!2d-91.62434388471937!3d14.864091774548966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858e9b5e8d6883f5%3A0x8ae85b8f78b020!2sLiceo%20Inform%C3%A1tico%20Manuel!5e0!3m2!1ses-419!2sgt!4v1658629424574!5m2!1ses-419!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <p class="derechos__reservados">© JosMlp. All rigths reserved 2022</p>
     </footer>
     <!-- Agregamos los archivos js-->
-    <script src="/js/menu.js"></script>
-    <script src="/js/nav.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
